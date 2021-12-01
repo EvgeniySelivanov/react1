@@ -1,5 +1,5 @@
 import * as React from 'react';
-
+import './to-do-item.css';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
@@ -12,12 +12,10 @@ function ToDoItem(props){
    
     const checkedChange=(value)=>{
         setChecked(!checked);
-
-    }
+   }
 return(
     <ListItem
-           
- secondaryAction={
+           secondaryAction={
               <Checkbox
               onChange={checkedChange}
               checked={checked}
@@ -33,7 +31,7 @@ return(
                   src={props.task.image}
                 />
               </ListItemAvatar>
-              <ListItemText   primary={props.task.title} />
+              <ListItemText className={checked?'trough':'no-trough'}  primary={props.task.title} />
             </ListItemButton>
           </ListItem>
         );

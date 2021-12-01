@@ -1,8 +1,9 @@
 import './to-do-list.css';
 import * as React from 'react';
 import { TaskContext } from '../../contexts/taskContext';
-import ToDoItem from '../to-do-item/to-do-item';
+import {ToDoItem,SimpleBottomNavigation,BasicButtons} from '../to-do-item/to-do-item';
 import List from '@mui/material/List';
+
 function ToDoList(){
     const [tasks, setTasks]=React.useContext(TaskContext);
     return <div>
@@ -10,6 +11,8 @@ function ToDoList(){
         {tasks.map(task=>
             <ToDoItem task={task}/>)}
             </List>
+            <SimpleBottomNavigation/>
+            <BasicButtons/>
     </div>;
 }
 export default ToDoList;

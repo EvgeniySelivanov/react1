@@ -1,6 +1,18 @@
 .trough{
       text-decoration: line-through;
+      color: brown;
 }
 .no-trough{
     text-decoration:none;
+    color: chartreuse;
+}
+.test{
+    color: crimson;
+}
+.test2{
+    color: rgb(90, 20, 220);
+}
+.test3{
+    color: rgb(218, 18, 168);
+    
 }
